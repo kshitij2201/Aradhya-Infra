@@ -18,7 +18,7 @@ const Register = () => {
   }
 
   try {
-    const response = await axios.post('http://localhost:5000/api/admin/register', {
+    const response = await axios.post('https://aradhya-infra-zeta.vercel.app/api/admin/register', {
       name,
       email,
       password,

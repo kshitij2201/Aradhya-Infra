@@ -56,7 +56,7 @@ function Ourprojects() {
   if (sideImage2) data.append('sideImage2', sideImage2);
 
   try {
-    await axios.post('http://localhost:5000/api/projects', data, {
+    await axios.post('https://aradhya-infra-zeta.vercel.app/api/projects', data, {
       headers: { 'Content-Type': 'multipart/form-data' }
     });
     alert('Project submitted successfully');

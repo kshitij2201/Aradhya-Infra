@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/projects');
+      const res = await axios.get('https://aradhya-infra-zeta.vercel.app/api/projects');
       setProjects(res.data);
     } catch (err) {
       console.error('Error fetching projects:', err);
@@ -47,7 +47,7 @@ const Dashboard = () => {
 
   const handleUpdate = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/projects/${id}`, editFormData);
+      const res = await axios.put(`https://aradhya-infra-zeta.vercel.app/api/projects/${id}`, editFormData);
       const updated = projects.map(p => p._id === id ? res.data : p);
       setProjects(updated);
       setEditingProject(null);
@@ -60,7 +60,7 @@ const Dashboard = () => {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/projects/${id}`);
+      await axios.delete(`https://aradhya-infra-zeta.vercel.app/api/projects/${id}`);
       fetchProjects();
     } catch (err) {
       console.error('Error deleting project:', err);
@@ -142,7 +142,7 @@ const Dashboard = () => {
                 <>
                   <h3 className="text-xl font-bold">{project.title}</h3>
                   <p className="text-gray-500">{project.location}</p>
-                  <img src={`http://localhost:5000/uploads/${project.mainImage}`} alt={project.title} className="w-40 mt-2 rounded" />
+                  <img src={`https://aradhya-infra-zeta.vercel.app/uploads/${project.mainImage}`} alt={project.title} className="w-40 mt-2 rounded" />
                   <p className="mt-2">{project.description}</p>
                   <p className="text-sm text-gray-600 mt-1">⭐ {project.rating} | {project.reviews} reviews</p>
                   <p className="text-sm mt-1">Tags: {project.tags}</p>

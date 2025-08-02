@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', {
+      const response = await axios.post('https://aradhya-infra-zeta.vercel.app/api/admin/login', {
         email,
         password
       });

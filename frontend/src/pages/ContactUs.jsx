@@ -28,7 +28,7 @@ function ContactUs() {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('http://localhost:5000/api/contact', formData);
+            await axios.post('https://aradhya-infra-zeta.vercel.app/api/contact', formData);
             alert('Message sent successfully');
             setFormData({ firstName: '', lastName: '', email: '', topic: '', message: '' });
         } catch (error) {

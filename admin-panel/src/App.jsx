@@ -5,7 +5,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Ourprojects from './pages/Ourprojects'
-import ContactUs from './pages/ContactUs'
+import Contactus from './pages/Contactus'
 import Enquiry from './pages/Enquiry'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/ourprojects" element={<Ourprojects />} />
-        <Route path="/contactus" element={< ContactUs/>} />
+        <Route path="/contactus" element={<Contactus/>} />
         <Route path="/enquiry" element={<Enquiry />} />
       </Routes>
     </Router>
